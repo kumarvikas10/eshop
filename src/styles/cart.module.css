@@ -1,0 +1,140 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .left{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    margin: 0.7rem;
+  }
+     
+  .left img{
+    height: 150px;
+    width: 150px;
+    display: block;
+    padding: 1rem;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    border-style: none;
+  }
+  
+  .right{
+    flex: 1 1 auto;
+    padding: 0rem 1.25rem;
+  }
+
+  .right label{
+    font-size: 1.25rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .delete{
+    color: red;
+  }
+  
+  .name{
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    margin-block-start: 1.2em;
+    margin-block-end: 1.2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }    
+
+  .description{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  
+  .footer{
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 2%; */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    /* display: block; */
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
+  .footer label{
+    font-size: 1.25rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .price{
+    justify-items: center;
+    align-items: center;
+  }
+
+  .rating{ 
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    padding-right: 8px;
+  }
+
+  .star{
+    color:gold;
+  }
+
+  .blankstar{
+    color: #ccc;
+  }
+  .edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .edit i{
+    margin-right: 2px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+
+
+
+
+
+  
