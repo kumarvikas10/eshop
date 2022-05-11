@@ -1,8 +1,10 @@
+/* main background color */
 .background{
   height: 100vh;
   background-image: linear-gradient(to right, #202e5b , #94ddde);
 }
 
+/* sort function and button css */
 .sort{
   display: flex;
     justify-content: flex-end;
@@ -29,6 +31,8 @@
     border-radius: 0.25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+/* product array and list css */
 .products{
   display: flex;
   flex-direction: column;
@@ -52,6 +56,7 @@
   width: 80%;
 }
 
+/* loader css  */
 .app-spinner {
   display: inline-block;
   width: 50px;
@@ -67,6 +72,7 @@
   left: 50%;
 }
 
+/* Navbar cart and tooltip css */
 .fa-cart-shopping{
   display: flex;
   position: relative;
@@ -90,6 +96,8 @@
   left: 24%;
   padding: 2px;
 }
+
+/* price button css */
 
 .price{
   margin: 2%;

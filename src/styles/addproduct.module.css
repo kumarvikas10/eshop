@@ -80,6 +80,7 @@
     margin: 2% 0%;
   }
 
-  /* .star{
-    color:gold;
-  } */
+  .createproduct label::after{
+    content: "*";
+    color: red;
+  }

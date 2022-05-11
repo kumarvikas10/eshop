@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import styles from "../styles/productcard.module.css";
-import { useFormInput } from "./hooks";
-import { handleProductEdit, handlecartaddition, handleProductRemove} from "../action";
-import ShortUniqueId from "short-unique-id";
+import { useFormInput } from "./hooks"; // geting custum hook and use as form input
+import { handleProductEdit, handlecartaddition, handleProductRemove} from "../action"; // all the necessary action
+import ShortUniqueId from "short-unique-id"; // genrate unique id 
 import { Link } from "react-router-dom";
+import { toast } from 'react-toastify'; // notification 
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ProductCard = (props) => {
@@ -13,7 +15,7 @@ const ProductCard = (props) => {
     const [price, setPrice] = useState(product.price);
     const description = useFormInput(product.description);
     const [rating, setRating] = useState(product.rating);
-    const uid = new ShortUniqueId({ length: 8 });
+    const uid = new ShortUniqueId({ length: 8 }); //set the length of id 8
     // console.log(product)
 
     function handlePriceChange(e) {
@@ -34,6 +36,7 @@ const ProductCard = (props) => {
           id: uid()
         };
         props.dispatch(handlecartaddition(newidproduct))
+        toast("Product Added to Cart")
     }
 
     function handleChange () {
@@ -43,6 +46,7 @@ const ProductCard = (props) => {
     function handleDelete () {
         const {product} = props;
         props.dispatch(handleProductRemove(product));
+        toast("Product Deleted from Product List")
     }
 
     function handleSaveChange () {
@@ -57,6 +61,7 @@ const ProductCard = (props) => {
           };
         console.log(editproduct)
         props.dispatch(handleProductEdit(editproduct));
+        toast("Product Edit Successfully")
         setEdit(false);
     }
 

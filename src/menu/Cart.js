@@ -1,7 +1,7 @@
-import CartCard from "./CartCard";
+import CartCard from "../components/CartCard";
 import { useEffect, useState } from "react";
 import React from "react";
-import Loader from "./Loader";
+import Loader from "../components/Loader";
 
 function Cart(props) {
   const [loading, setLoading] = useState(true);
@@ -10,6 +10,7 @@ function Cart(props) {
 
   useEffect(() => {
     console.log(cart)
+    //calculate the total price of items in cart
     const countTotal =()=> {
       var total = 0;
       cart.cart.map((product) => (total += product.price));

@@ -6,6 +6,8 @@ export const DELTE_FROM_CART = "DELETE_FROM_CART";
 export const DELTE_FROM_PRODUCT_LIST = "DELETE_FROM_PRODUCT_LIST";
 export const PRODUCT_SORT_BY_PRICE = "PRODUCT_SORT_BY_PRICE";
 
+// Handle API Call From JSON SERVER BY USING GITHUB
+
 export function handleProductFetch() {
   const url = `https://my-json-server.typicode.com/kumarvikas10/ecommerce-api/products`;
   return function (dispatch) {
@@ -18,6 +20,8 @@ export function handleProductFetch() {
       });
   };
 }
+
+// Handle Product Edit 
 
 export function handleProductEdit(product) {
     console.log(product)
@@ -35,6 +39,8 @@ export function editProduct(product) {
   };
 }
 
+// ADDING PRODUCT from Server
+
 export function addProducts(product) {
   console.log(product)
   return {
@@ -43,6 +49,8 @@ export function addProducts(product) {
   };
 }
 
+//ADDING PRODUCT BY FORM
+
 export function addProduct(product) {
   console.log(product)
   return {
@@ -50,6 +58,8 @@ export function addProduct(product) {
     product,
   };
 }
+
+//HANDLE CART ADDITION
 
 export function handlecartaddition(product) {
   console.log(product)
@@ -66,6 +76,8 @@ export function addtocart(product) {
   };
 }
 
+//HANDLE PRODUCT DELETE BTN
+
 export function handleProductDelete(product) {
   console.log(product)
   return function (dispatch) {
@@ -81,6 +93,7 @@ export function deletefromcart(product) {
   };
 }
 
+//REMOVE PRODUCT FROM PRODUCT LIST
 export function handleProductRemove(product) {
   console.log(product)
   return function (dispatch) {
@@ -95,6 +108,8 @@ export function deletefromProductList(product) {
     product,
   };
 }
+
+//HANDLE SORT BTN
 
 export function handleSortPrice(product) {
   console.log(product)

@@ -1,14 +1,18 @@
 import React from "react";
 import styles from '../styles/cart.module.css'
 import { handleProductDelete } from "../action";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import { useState } from "react";
 
 const CartCard = (props) => {
     const {product} = props;
-
+    
+    //FUNCTION TO DELETE PRODUCT FROM CART
     function deleteProduct (){
       const {product} = props;
       props.dispatch( handleProductDelete(product))
+      toast("Product Delete From Cart")
     }
 
     return (

@@ -1,7 +1,7 @@
-import ProductCard from "./ProductCard";
+import ProductCard from "../components/ProductCard";
 import { useEffect, useState} from "react";
 import React from "react";
-import Loader from "./Loader";
+import Loader from "../components/Loader";
 import { handleSortPrice } from "../action";
 
 function Products (props) {

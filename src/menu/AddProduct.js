@@ -1,8 +1,10 @@
-import { useFormInput } from "./hooks";
+import { useFormInput } from "../components/hooks";
 import styles from "../styles/addproduct.module.css";
 import { useState } from "react";
 import { addProduct } from "../action";
 import ShortUniqueId from "short-unique-id";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddProduct = (props) => {
   const name = useFormInput("");
@@ -16,7 +18,8 @@ const AddProduct = (props) => {
   function handlePriceChange(e) {
     setPrice(parseInt(e.target.value));
   }
-
+  
+  //hnadle the new product addition btn
   function handleSubmit(e) {
     e.preventDefault();
     let product = {
@@ -29,6 +32,7 @@ const AddProduct = (props) => {
     };
     console.log(product);
     props.dispatch(addProduct(product));
+    toast("New Product Added in Product List")
   }
   return (
     <div className={styles.addproduct}>
@@ -38,25 +42,25 @@ const AddProduct = (props) => {
           <div className={styles.formfield}>
             <label>Name</label>
             {/* <input value={name} onChange={(e) => setname(e.target.value)} /> */}
-            <input {...name} />
+            <input {...name} required/>
           </div>
 
           <div className={styles.formfield}>
             <label>Price</label>
-            <input type="number" value={price} onChange={handlePriceChange} />
+            <input type="number" value={price} onChange={handlePriceChange}  required/>
             {/* <input type="number" {...price} /> */}
           </div>
 
           <div className={styles.formfield}>
             <label>Description</label>
             {/* <textarea value={description} onChange={(e) => setdescription(e.target.value)} ></textarea> */}
-            <textarea {...description} />
+            <textarea {...description} required/>
           </div>
 
           <div className={styles.formfield}>
             <label>Image</label>
             {/* <textarea value={description} onChange={(e) => setdescription(e.target.value)} ></textarea> */}
-            <input {...img} />
+            <input {...img} required/>
           </div>
 
           {/* <div className={styles.formfield}>

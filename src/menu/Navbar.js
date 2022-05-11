@@ -1,8 +1,6 @@
 import React from "react";
-// import { connect } from "react-redux";
 import styles from "../styles/navbar.module.css";
 import { Link } from "react-router-dom";
-// import {storeContext} from '../index'
 
 class Navbar extends React.Component {
   render() {

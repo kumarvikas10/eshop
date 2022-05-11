@@ -2,6 +2,8 @@ import styles from "../styles/productinfo.module.css";
 import { useParams } from "react-router-dom";
 import ShortUniqueId from "short-unique-id";
 import { handlecartaddition } from "../action";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ProductInfo = (props) => {
   const { products } = props;
@@ -20,6 +22,7 @@ const ProductInfo = (props) => {
       id: uid(),
     };
     props.dispatch(handlecartaddition(newidproduct));
+    toast("Product Added to cart ")
   }
 
   return (
